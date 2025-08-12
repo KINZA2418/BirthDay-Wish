@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Birthday, My Dear</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎉 Happy Birthday, My Dear 🎉</h1>
+    <p>To the man who makes my world brighter—this is just a little something to celebrate you.</p>
+    
+    <div class="nav">
+      <a href="message.html">Read My Message</a>
+      <a href="gallery.html">See Our Memories</a>
+    </div>
+  </div>
+
+  <script>
+    const colors = ["#fff", "#ffcc00", "#ff4081", "#40c4ff", "#69f0ae"];
+    for (let i = 0; i < 80; i++) {
+      const confetti = document.createElement("div");
+      confetti.className = "confetti";
+      confetti.style.position = "absolute";
+      confetti.style.left = Math.random() * 100 + "vw";
+      confetti.style.top = Math.random() * -100 + "px";
+      confetti.style.width = "10px";
+      confetti.style.height = "10px";
+      confetti.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+      confetti.style.animation = `fall ${2 + Math.random() * 3}s linear infinite`;
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
